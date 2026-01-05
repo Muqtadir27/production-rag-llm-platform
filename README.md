@@ -77,33 +77,33 @@ to derive actionable business insights and support data-driven decision-making.
 ---
 
 ## 📁 Project Structure
-llm-platform/
-├── backend/
-│ └── app/
-│ ├── services/
-│ │ ├── document_loader.py
-│ │ ├── text_splitter.py
-│ │ ├── embeddings.py
-│ │ ├── vector_store.py
-│ │ ├── prompt.py
-│ │ ├── llm.py
-│ │ └── rag_pipeline.py
-│ └── main.py
-├── data/
-│ └── documents/
-├── notebooks/
-└── README.md
+llm-platform/    
+├── backend/          
+│ └── app/         
+│ ├── services/          
+│ │ ├── document_loader.py        
+│ │ ├── text_splitter.py         
+│ │ ├── embeddings.py         
+│ │ ├── vector_store.py           
+│ │ ├── prompt.py         
+│ │ ├── llm.py          
+│ │ └── rag_pipeline.py         
+│ └── main.py         
+├── data/              
+│ └── documents/           
+├── notebooks/        
+└── README.md           
 
 
 ---
 
 ## 🚀 How to Run Locally
 
-```bash
+```
 pip install -r backend/requirements.txt  
 python -m backend.app.services.test_rag 
-
-🔮 Future Enhancements
+```
+## 🔮 Future Enhancements
 
 REST API using FastAPI    
 Streaming responses     
@@ -112,10 +112,9 @@ Swap local LLM with OpenAI / Gemini / Mistral
 Cloud deployment (Render / AWS)  
 Frontend UI for document Q&A    
 
-🧑‍💻 Author
+## 🧑‍💻 Author
 
 Mohammed Abdul Muqtadir
-AI & Data Engineer
+AI & Data Science Engineer
 GitHub: https://github.com/Muqtadir27
-
 LinkedIn: https://linkedin.com/in/muqtadir27
