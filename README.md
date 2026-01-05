@@ -38,9 +38,7 @@ This system solves those problems by:
 
 ## 🏗️ Architecture Overview
 
-
-
-
+<img width="1024" height="1536" alt="Image" src="https://github.com/user-attachments/assets/141694b6-3368-4b8e-84c6-eb284b860ae7" />
 
 ## 🧰 Tech Stack
 
@@ -94,7 +92,6 @@ llm-platform/
 ├── notebooks/        
 └── README.md           
 
-
 ---
 
 ## 🚀 How to Run Locally
@@ -114,7 +111,7 @@ Frontend UI for document Q&A
 
 ## 🧑‍💻 Author
 
-Mohammed Abdul Muqtadir
-AI & Data Science Engineer
-GitHub: https://github.com/Muqtadir27
-LinkedIn: https://linkedin.com/in/muqtadir27
+Mohammed Abdul Muqtadir           
+AI & Data Science Engineer         
+GitHub: https://github.com/Muqtadir27     
+LinkedIn: https://linkedin.com/in/muqtadir27       
