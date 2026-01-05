@@ -38,7 +38,7 @@ This system solves those problems by:
 
 ## 🏗️ Architecture Overview
 
-<img width="1024" height="1536" alt="Image" src="https://github.com/user-attachments/assets/141694b6-3368-4b8e-84c6-eb284b860ae7" />
+<img width="832" height="1248" alt="Image" src="https://github.com/user-attachments/assets/57fe7f04-13df-4d0b-9d72-4bb9b42380b1" />  
 
 ## 🧰 Tech Stack
 
