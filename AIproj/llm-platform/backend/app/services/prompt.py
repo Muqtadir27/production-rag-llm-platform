@@ -1,16 +1,39 @@
-def build_prompt(context_chunks, query):
-    context = "\n\n".join(context_chunks)
+from typing import List, Dict
+
+
+def build_prompt(
+    context_chunks: List[str],
+    question: str,
+    chat_history: List[Dict[str, str]] | None = None,
+) -> str:
+    """
+    Builds a grounded, hallucination-resistant prompt.
+    """
+
+    history_text = ""
+    if chat_history:
+        for turn in chat_history[-6:]:  # limit memory
+            role = turn.get("role", "user")
+            content = turn.get("content", "")
+            history_text += f"{role.upper()}: {content}\n"
+
+    context_text = "\n\n".join(context_chunks)
 
     prompt = f"""
-You are an AI assistant. Answer the question using ONLY the context below.
-If the answer is not in the context, say "I don't know based on the provided documents."
+You are a precise, professional AI assistant.
+Answer ONLY using the provided context.
+If the answer is not present, say you do not know.
+
+Conversation history:
+{history_text}
 
 Context:
-{context}
+{context_text}
 
 Question:
-{query}
+{question}
 
 Answer:
-"""
+""".strip()
+
     return prompt

@@ -1,0 +1,222 @@
+[
+  {
+    "index": 0,
+    "content": "Machine Learning: A Comprehensive Guide\n\nWhat is Machine Learning?\n\nMachine Learning is a subset of artificial intelligence (AI) that enables systems to learn and improve from experience without being explicitly programmed. In other words, ML systems can learn and adapt to new data without human intervention.\n\nMachine learning uses algorithms and statistical models to analyze patterns in data. These algorithms can identify relationships between variables that humans might not easily detect. When exposed to more data, machine learning models can improve their accuracy and performance automatically.\n\nKey Characteristics of Machine Learning:\n\n1. Automatic Learning: ML systems learn from data automatically without needing explicit instructions for every task.",
+    "metadata": {
+      "source": "machine_learning_guide.txt",
+      "source_path": "data\\documents\\machine_learning_guide.txt",
+      "document_type": ".txt",
+      "chunk_index": 0,
+      "chunk_size": 765
+    }
+  },
+  {
+    "index": 1,
+    "content": "2. Data-Driven: The quality and quantity of data directly impact model performance.\n\n3. Adaptability: ML models can adapt to new patterns and changes in data over time.\n\n4. Pattern Recognition: ML excels at finding hidden patterns in large datasets.\n\nTypes of Machine Learning\n\nSupervised Learning:\n\nSupervised learning involves training algorithms with labeled data. The algorithm learns from examples where both input and correct output are provided. Common applications include classification (assigning data to categories) and regression (predicting continuous values). For example, predicting house prices based on features like size and location is a regression task.\n\nUnsupervised Learning:",
+    "metadata": {
+      "source": "machine_learning_guide.txt",
+      "source_path": "data\\documents\\machine_learning_guide.txt",
+      "document_type": ".txt",
+      "chunk_index": 1,
+      "chunk_size": 697
+    }
+  },
+  {
+    "index": 2,
+    "content": "Unsupervised learning works with unlabeled data. The algorithm tries to find hidden patterns or structures within the data without knowing the correct answers. Clustering (grouping similar data points) and dimensionality reduction are common unsupervised learning tasks.\n\nReinforcement Learning:\n\nReinforcement learning trains agents to make sequential decisions. The agent learns by receiving rewards or penalties for its actions. This approach is used in game AI, robotics, and autonomous systems.\n\nDeep Learning:\n\nDeep learning uses artificial neural networks with multiple layers (deep networks) to process data. Deep learning is particularly effective for processing unstructured data like images, audio, and text.\n\nReal-World Applications of Machine Learning",
+    "metadata": {
+      "source": "machine_learning_guide.txt",
+      "source_path": "data\\documents\\machine_learning_guide.txt",
+      "document_type": ".txt",
+      "chunk_index": 2,
+      "chunk_size": 764
+    }
+  },
+  {
+    "index": 3,
+    "content": "1. Healthcare: Predicting diseases, analyzing medical imaging, and personalized treatment recommendations.\n\n2. Finance: Fraud detection, credit risk assessment, and algorithmic trading.\n\n3. E-commerce: Personalized recommendations, customer segmentation, and demand forecasting.\n\n4. Transportation: Self-driving vehicles, route optimization, and traffic prediction.\n\n5. Natural Language Processing: Chatbots, translation services, and sentiment analysis.\n\nChallenges in Machine Learning\n\n1. Data Quality: Poor quality or biased data leads to poor model performance.\n\n2. Overfitting: Models memorize training data instead of learning generalizable patterns.\n\n3. Computational Resources: Training large models requires significant computational power.",
+    "metadata": {
+      "source": "machine_learning_guide.txt",
+      "source_path": "data\\documents\\machine_learning_guide.txt",
+      "document_type": ".txt",
+      "chunk_index": 3,
+      "chunk_size": 749
+    }
+  },
+  {
+    "index": 4,
+    "content": "4. Interpretability: Understanding why a model makes specific decisions is often difficult.\n\n5. Data Privacy: Protecting sensitive data while building effective models is challenging.\n\nThe Future of Machine Learning\n\nMachine learning continues to evolve rapidly. Emerging trends include:\n\n- Federated Learning: Training models on decentralized data\n\n- Explainable AI: Making AI decisions more transparent and interpretable\n\n- Edge AI: Running ML models on edge devices for faster inference\n\n- Quantum Machine Learning: Using quantum computers for ML tasks\n\nConclusion",
+    "metadata": {
+      "source": "machine_learning_guide.txt",
+      "source_path": "data\\documents\\machine_learning_guide.txt",
+      "document_type": ".txt",
+      "chunk_index": 4,
+      "chunk_size": 567
+    }
+  },
+  {
+    "index": 5,
+    "content": "Machine learning is transforming industries and enabling new possibilities. As data continues to grow exponentially, machine learning becomes increasingly important for extracting insights and making intelligent decisions. Organizations that master machine learning will have a significant competitive advantage.",
+    "metadata": {
+      "source": "machine_learning_guide.txt",
+      "source_path": "data\\documents\\machine_learning_guide.txt",
+      "document_type": ".txt",
+      "chunk_index": 5,
+      "chunk_size": 312
+    }
+  },
+  {
+    "index": 6,
+    "content": "\"\"\"\n\nExample document for testing the RAG pipeline.\n\nReplace this with your actual documents.\n\n\"\"\"\n\n# Introduction to NeuroCore RAG System\n\n## What is NeuroCore?\n\nNeuroCore is a production-grade Retrieval-Augmented Generation (RAG) system that combines the power of semantic search with large language models. It enables AI systems to answer questions based strictly on provided documents, eliminating hallucinations and ensuring factual accuracy.\n\n## Key Features\n\n- **Document Ingestion**: Automatically processes PDF, TXT, and Markdown files\n\n- **Semantic Chunking**: Intelligently splits documents while preserving context\n\n- **Vector Embeddings**: Uses Sentence-Transformers for high-quality semantic embeddings",
+    "metadata": {
+      "source": "README.md",
+      "source_path": "data\\documents\\README.md",
+      "document_type": ".md",
+      "chunk_index": 0,
+      "chunk_size": 716
+    }
+  },
+  {
+    "index": 7,
+    "content": "- **Fast Search**: FAISS-based vector database for sub-millisecond similarity search\n\n- **Grounded Answers**: LLM generates responses only from retrieved context\n\n- **Local Inference**: Runs entirely locally with no external API dependencies\n\n## Architecture Components\n\n### 1. Document Loader\n\nHandles ingestion of various document formats including PDF, plain text, and markdown files.\n\n### 2. Text Splitter\n\nSplits documents into semantic chunks while preserving context and maintaining overlap for better retrieval.\n\n### 3. Embedding Service\n\nGenerates semantic embeddings using Sentence-Transformers models for efficient similarity matching.\n\n### 4. Vector Store\n\nFAISS-based vector database that enables fast similarity search over millions of documents.\n\n### 5. LLM Service",
+    "metadata": {
+      "source": "README.md",
+      "source_path": "data\\documents\\README.md",
+      "document_type": ".md",
+      "chunk_index": 1,
+      "chunk_size": 780
+    }
+  },
+  {
+    "index": 8,
+    "content": "Uses HuggingFace Transformers (FLAN-T5) for local inference without external API calls.\n\n### 6. Prompt Service\n\nHandles prompt engineering to ensure answers are grounded in retrieved documents.\n\n### 7. RAG Pipeline\n\nOrchestrates all components into a complete pipeline for answering questions.\n\n## How It Works\n\n1. **Preprocessing**: Documents are loaded and split into meaningful chunks\n\n2. **Embedding**: Each chunk is converted to a semantic embedding vector\n\n3. **Storage**: Embeddings are stored in a FAISS vector database for fast retrieval\n\n4. **Query**: User's question is embedded using the same embedding model\n\n5. **Retrieval**: Top-K most similar documents are retrieved based on embedding similarity\n\n6. **Generation**: Retrieved documents are passed as context to the LLM",
+    "metadata": {
+      "source": "README.md",
+      "source_path": "data\\documents\\README.md",
+      "document_type": ".md",
+      "chunk_index": 2,
+      "chunk_size": 785
+    }
+  },
+  {
+    "index": 9,
+    "content": "7. **Response**: LLM generates an answer grounded in the retrieved context\n\n## Why This Matters\n\nTraditional LLM-based chatbots have several issues:\n\n- **Hallucinations**: Generate false information not in training data\n\n- **Lack of Specificity**: Can't access current or proprietary information\n\n- **No Traceability**: Hard to verify where answers come from\n\n- **Scalability Issues**: Don't scale to enterprise use cases\n\nRAG solves these problems by:\n\n- **Separating Retrieval from Generation**: Gets relevant info first, then answers\n\n- **Grounding Answers**: All responses are based on provided documents\n\n- **Traceability**: Can point to exact source documents\n\n- **Scalability**: Works with documents of any size and frequency\n\n## Use Cases",
+    "metadata": {
+      "source": "README.md",
+      "source_path": "data\\documents\\README.md",
+      "document_type": ".md",
+      "chunk_index": 3,
+      "chunk_size": 746
+    }
+  },
+  {
+    "index": 10,
+    "content": "- **Customer Support**: Answer questions based on FAQ and documentation\n\n- **Knowledge Management**: Query internal policies and procedures\n\n- **Research**: Analyze large document collections\n\n- **Compliance**: Ensure answers comply with organizational guidelines\n\n- **Training**: Provide accurate information from training materials\n\n## Getting Started\n\n1. Place your documents in `data/documents/`\n\n2. Run `python -m backend.app.services.test_rag`\n\n3. The system will automatically:\n\n- Load documents\n\n- Split them into chunks\n\n- Generate embeddings\n\n- Build the vector index\n\n- Answer your queries\n\n## Technical Stack\n\n- **LangChain**: Document processing and pipeline orchestration\n\n- **Sentence-Transformers**: Semantic embeddings (384-768 dimensions)\n\n- **FAISS**: Vector similarity search",
+    "metadata": {
+      "source": "README.md",
+      "source_path": "data\\documents\\README.md",
+      "document_type": ".md",
+      "chunk_index": 4,
+      "chunk_size": 795
+    }
+  },
+  {
+    "index": 11,
+    "content": "- **HuggingFace Transformers**: Local LLM inference (FLAN-T5)\n\n- **PyPDF**: PDF document parsing\n\n- **FastAPI**: REST API (optional)\n\n## Performance Metrics\n\n- **Search Latency**: < 10ms for queries\n\n- **Embedding Generation**: ~100 documents/minute (CPU), ~1000/minute (GPU)\n\n- **Memory**: Depends on document volume, typically 2-8GB for standard deployments\n\n- **Accuracy**: Answers strictly from provided documents (no hallucinations)\n\n## Future Enhancements\n\n- REST API with FastAPI\n\n- Streaming responses\n\n- Authentication and rate limiting\n\n- Support for multiple languages\n\n- Cloud deployment options\n\n- Integration with commercial LLMs\n\n## Mohammed Abdul Muqtadir\n\nAI & Data Science Engineer\n\n- GitHub: https://github.com/Muqtadir27\n\n- LinkedIn: https://linkedin.com/in/muqtadir27",
+    "metadata": {
+      "source": "README.md",
+      "source_path": "data\\documents\\README.md",
+      "document_type": ".md",
+      "chunk_index": 5,
+      "chunk_size": 788
+    }
+  },
+  {
+    "index": 12,
+    "content": "Mohammed Abdul Muqtadir\n\nHyderabad, Telangana\n\n\u2642phone+91 9177645707 /envel\u2322peabdulmuqtadir1027@gmail.com /linkedinlinkedin.com/in/muqtadir27 /githubgithub.com/Muqtadir27\n\nProfile Summary\n\n\u2022Proficient in analyzing complex datasets using Python, SQL, and ML libraries to derive actionable business insights and\n\nsupport data-driven decision-making.\n\n\u2022Skilled in building predictive models, data pipelines, and dashboards using Power BI and Scikit-learn for performance\n\ntracking and personalization.\n\n\u2022Strong hands-on experience in statistical analysis, anomaly detection, and time-series forecasting for real-world business\n\nuse cases.\n\n\u2022Skilled in developing scalable AI solutions and extracting actionable insights from complex data to support business\n\ndecision-making.\n\nTechnical Skills",
+    "metadata": {
+      "source": "resume_mohammed_abdul_muqtadir27.pdf",
+      "source_path": "data\\documents\\resume_mohammed_abdul_muqtadir27.pdf",
+      "document_type": ".pdf",
+      "chunk_index": 0,
+      "chunk_size": 789
+    }
+  },
+  {
+    "index": 13,
+    "content": "Languages: Python, SQL (PostgreSQL), R, Java\n\nLibraries & Frameworks: NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn\n\nAnalytics & BI Tools: Excel, Power BI, Tableau, Power Query, Qlik\n\nDatabases: PostgreSQL, MySQL\n\nETL & Workflow: Alteryx, ETL Pipelines\n\nCloud & Deployment: AWS (Basic), Streamlit, Flask\n\nVersion Control & Dev Tools: Git, GitHub, Jupyter Notebook, VS Code\n\nEducation\n\nMethodist College Of Engineering and Technology Nov 2021 \u2013 April 2025\n\nBachelor of Engineering in Artificial Intelligence and Data Science - CGPA:9.22 Hyderabad, Telangana\n\nRelevant Coursework\n\n\u2022Data Integrity\n\n\u2022Data Governance\u2022Generative AI\n\n\u2022Requirement Gathering\u2022Data Visualization\n\n\u2022Data Manipulation\u2022Data Mining\n\n\u2022Business Impact Analysis\n\nProjects",
+    "metadata": {
+      "source": "resume_mohammed_abdul_muqtadir27.pdf",
+      "source_path": "data\\documents\\resume_mohammed_abdul_muqtadir27.pdf",
+      "document_type": ".pdf",
+      "chunk_index": 1,
+      "chunk_size": 741
+    }
+  },
+  {
+    "index": 14,
+    "content": "GeminiDecode: Multi-language Document Extraction |Python, NLP, Regex, spaCy, NLTK |GitHub Jan 2024\n\n\u2022Developed a scalable multilingual parser for PDFs, DOCX, and images, achieving 95%+ language detection accuracy.\n\n\u2022Applied regex and NLP(spaCy, NLTK) to segment and classify 5,000+ text blocks with 98% accuracy.\n\n\u2022Improved processing speed by 30% through modular and customizable extraction pipelines.\n\n\u2022Enabled batch processing with a fault-tolerant architecture, reducing manual effort by 40% and improving system\n\nreliability.\n\nThe Anatomy of Amazon Sales |Python, Time Series Forecasting, Pandas, Power BI |Research Paper Jan 2024\n\n\u2022Analyzed 50k+ sales records to forecast demand and identify product-wise profitability.\n\n\u2022Implemented time series models to improve sales predictions by 15%.",
+    "metadata": {
+      "source": "resume_mohammed_abdul_muqtadir27.pdf",
+      "source_path": "data\\documents\\resume_mohammed_abdul_muqtadir27.pdf",
+      "document_type": ".pdf",
+      "chunk_index": 2,
+      "chunk_size": 795
+    }
+  },
+  {
+    "index": 15,
+    "content": "\u2022Created dashboards reducing manual reporting time by 30% for business insights.\n\n\u2022Co-authored research paper published in IJIRCCCE, contributing to e-commerce analytics.\n\nAutism Support System |Computer Vision, Audio Emotion, Multimodal AI |Research Paper Mar 2024\n\n\u2022Engineered real-time emotion detection using facial, gesture, and audio inputs, achieving 92% recognition accuracy.\n\n\u2022Designed emotion-based games, increasing user engagement in children by 35% and aiding emotional learning.\n\n\u2022Engineered multimodal AI pipelines that improved system reliability by 25% and interaction accuracy by 18%.\n\n\u2022Published findings in IJCRT, demonstrating 87% therapeutic efficacy with clinical expert collaboration.",
+    "metadata": {
+      "source": "resume_mohammed_abdul_muqtadir27.pdf",
+      "source_path": "data\\documents\\resume_mohammed_abdul_muqtadir27.pdf",
+      "document_type": ".pdf",
+      "chunk_index": 3,
+      "chunk_size": 708
+    }
+  },
+  {
+    "index": 16,
+    "content": "Qlik Airline Business Analytics |Qlik Sense, SQL, Geo Analytics, Cohort Analysis |GitHub July 2024\n\n\u2022Designed interactive dashboards tracking churn, routes, and KPIs, improving decision speed by 40%.\n\n\u2022Performed cohort analysis to improve retention and booking conversion by 5%.\n\n\u2022Used GeoAnalytics for route optimization and cost-saving insights (10% fuel efficiency).\n\n\u2022Delivered actionable insights in internal reports, influencing stakeholder decisions and strategy.\n\nExtracurricular / Certificates\n\n\u2022Google Professional Data Analytics, Coursera \u2013 View Credentials\n\n\u2022Campus to Corporate Program, Capgemini \u2013 View Credentials\n\n\u2022BCG Data Science Job Simulation \u2013 View Credentials",
+    "metadata": {
+      "source": "resume_mohammed_abdul_muqtadir27.pdf",
+      "source_path": "data\\documents\\resume_mohammed_abdul_muqtadir27.pdf",
+      "document_type": ".pdf",
+      "chunk_index": 4,
+      "chunk_size": 681
+    }
+  },
+  {
+    "index": 17,
+    "content": "The Solar System\n\nThe Solar System is the gravitationally bound system of the Sun and the objects that orbit it. It formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud. The vast majority of the system's mass is in the Sun, with the majority of the remaining mass contained in Jupiter.\n\nPlanets\n\nThe inner solar system contains four terrestrial planets: Mercury, Venus, Earth, and Mars. These are small and rocky. The outer solar system is home to the four giant planets: Jupiter, Saturn, Uranus, and Neptune. Jupiter is by far the largest planet in our solar system - more than 11 times wider than Earth and composed mainly of hydrogen and helium gas.\n\nThe Eight Planets\n\n1. Mercury - The smallest planet, closest to the Sun",
+    "metadata": {
+      "source": "test_document.txt",
+      "source_path": "data\\documents\\test_document.txt",
+      "document_type": ".txt",
+      "chunk_index": 0,
+      "chunk_size": 773
+    }
+  },
+  {
+    "index": 18,
+    "content": "2. Venus - Similar in size to Earth, hottest planet\n\n3. Earth - Our home planet, the only known world with life\n\n4. Mars - The Red Planet, potential for human colonization\n\n5. Jupiter - Gas giant, largest planet in our system\n\n6. Saturn - Known for its prominent rings\n\n7. Uranus - Rotates on its side\n\n8. Neptune - The windiest planet, farthest from the Sun\n\nMoons\n\nMany planets have natural satellites, or moons. Earth has one moon. Mars has two small moons. Jupiter has 95 known moons, making it the planet with the most moons. Saturn has 146 known moons and a system of rings.\n\nAsteroids and Comets\n\nBetween Mars and Jupiter lies the asteroid belt, containing millions of rocky objects. Beyond Neptune lies the Kuiper Belt, home to icy bodies and dwarf planets like Pluto.\n\nThe Sun",
+    "metadata": {
+      "source": "test_document.txt",
+      "source_path": "data\\documents\\test_document.txt",
+      "document_type": ".txt",
+      "chunk_index": 1,
+      "chunk_size": 785
+    }
+  },
+  {
+    "index": 19,
+    "content": "The Sun is a G-type main-sequence star (yellow dwarf) that comprises about 99.86% of the system's mass. Solar energy drives most of the weather on Earth's surface and powers plant growth on the planet.",
+    "metadata": {
+      "source": "test_document.txt",
+      "source_path": "data\\documents\\test_document.txt",
+      "document_type": ".txt",
+      "chunk_index": 2,
+      "chunk_size": 201
+    }
+  }
+]

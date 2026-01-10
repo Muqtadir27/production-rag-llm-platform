@@ -1,0 +1,45 @@
+# NeuroCore RAG Model Landing Page
+
+A modern, dark-themed Next.js application showcasing the NeuroCore RAG (Retrieval Augmented Generation) model.
+
+## Features
+
+- **Landing Page**: Hero section with "Initialize Sequence" button
+- **Document Upload**: File uploader for PDF documents
+- **Chat Interface**: Interactive RAG model chat window
+- **Technology Stack**: Detailed architecture and processing protocols
+- **Use Cases**: Showcase of various application examples
+- **Integration**: VS Code setup and integration guide
+- **Book a Call**: Contact form with booking modal
+
+## Getting Started
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Run the development server:
+```bash
+npm run dev
+```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Tech Stack
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Lucide React (icons)
+
+## Pages
+
+- `/` - Landing page
+- `/upload` - Document upload page
+- `/chat` - Chat interface
+- `/technology` - Technology stack and architecture
+- `/use-cases` - Use cases showcase
+- `/integration` - VS Code integration guide
+- `/lets-connect` - Book a call page
+- `/docs` - Documentation (placeholder)
