@@ -8,7 +8,7 @@ This project demonstrates **real-world AI system design**, not just prompt-based
 ---
 
 ## 🔍 What This Project Does
-
+    
 - Ingests PDF and text documents
 - Splits content into context-preserving chunks
 - Converts chunks into semantic embeddings
@@ -19,7 +19,7 @@ This project demonstrates **real-world AI system design**, not just prompt-based
 > If the answer is not present in the documents, the system explicitly says so.
 
 ---
-
+   
 ## 🧠 Why This Matters
 
 Most LLM demos:
@@ -93,7 +93,7 @@ llm-platform/
 └── README.md           
 
 ---
-
+.
 ## 🚀 How to Run Locally
 
 ```
