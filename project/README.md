@@ -289,7 +289,7 @@ RAGPipeline(llm_model="google/flan-t5-small")
 # Powerful (780M params, 7GB)
 RAGPipeline(llm_model="google/flan-t5-large")
 ```
-
+   
 ## 📊 Performance Metrics
 
 | Metric | Value |
