@@ -29,7 +29,7 @@ This project demonstrates **real-world AI system design**, not just prompt-based
 - Uses vector search for semantic matching
 - Follows production-grade architecture
 - Fully traceable source documents
-
+.
 ## 🏗️ Architecture Overview
 
 ```
