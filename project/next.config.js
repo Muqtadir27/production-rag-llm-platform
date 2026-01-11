@@ -1,21 +1,20 @@
 /** @type {import('next').NextConfig} */
+const repoName = 'production-rag-llm-platform';
+
 const nextConfig = {
   reactStrictMode: true,
 
-  // REQUIRED for GitHub Pages (static hosting)
+  // Required for GitHub Pages
   output: 'export',
+  trailingSlash: true,
 
-  // GitHub Pages repo name
-  basePath: '/production-rag-llm-platform',
-  assetPrefix: '/production-rag-llm-platform/',
+  // IMPORTANT: GitHub Pages subpath
+  basePath: `/${repoName}`,
+  assetPrefix: `/${repoName}/`,
 
-  // Required for static export
   images: {
     unoptimized: true,
   },
-
-  // GitHub Pages compatibility
-  trailingSlash: true,
 };
 
 module.exports = nextConfig;

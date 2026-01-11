@@ -1,15 +1,13 @@
 # GitHub Actions workflow for deploying frontend to GitHub Pages
-# 
+#
 # This workflow:
 # 1. Runs on every push to the main branch
-# 2. Installs Node.js dependencies
-# 3. Builds the Next.js app as static export
-# 4. Deploys to the gh-pages branch
+# 2. Installs Node.js dependencies from /project
+# 3. Builds the Next.js app as a static export
+# 4. Deploys the exported site to GitHub Pages
 #
-# The frontend will be available at: https://<username>.github.io/<repository-name>/
-#
-# IMPORTANT: Enable GitHub Pages in repository settings:
-# Settings > Pages > Source: Deploy from a branch > Branch: gh-pages / (root)
+# Site URL:
+# https://muqtadir27.github.io/production-rag-llm-platform/
 
 name: Deploy Frontend to GitHub Pages
 
@@ -17,7 +15,6 @@ on:
   push:
     branches:
       - main
-  # Allow manual workflow dispatch
   workflow_dispatch:
 
 permissions:
@@ -35,7 +32,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -45,23 +42,25 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+          cache-dependency-path: project/package-lock.json
 
       - name: Install dependencies
+        working-directory: project
         run: npm ci
 
       - name: Build static export
+        working-directory: project
         run: npm run build
         env:
-          # Set backend URL for production (update this with your backend URL)
           NEXT_PUBLIC_BACKEND_URL: ${{ secrets.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000' }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './out'
+          path: project/out
 
       - name: Deploy to GitHub Pages
         id: deployment
