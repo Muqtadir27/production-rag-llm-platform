@@ -49,19 +49,10 @@ export default function UploadPage() {
     setIsUploading(true)
     
     try {
-      const formData = new FormData()
-      formData.append('file', file)
-
-      const response = await fetch('/api/upload', {
-        method: 'POST',
-        body: formData,
-      })
-
-      const data = await response.json()
-
-      if (!response.ok && response.status !== 207) {
-        throw new Error(data.error || 'Upload failed')
-      }
+      // Import API client dynamically to avoid SSR issues
+      const { uploadDocument } = await import('@/lib/api-client')
+      
+      const data = await uploadDocument(file)
 
       // Show success message
       alert(`Document "${file.name}" has been uploaded and indexed successfully!`)

@@ -31,10 +31,12 @@ except Exception as e:
     sys.exit(1)
 
 # Step 2: Start FastAPI with the loaded pipeline
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict, Any
+import shutil
+from pathlib import Path
 
 app = FastAPI(title="NeuroCore RAG API", version="1.0.0")
 
@@ -81,6 +83,44 @@ async def query(request: QueryRequest):
     except Exception as e:
         logger.error(f"Query error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/upload")
+async def upload_file(file: UploadFile = File(...)):
+    """Upload a document and rebuild the index"""
+    try:
+        # Validate file type
+        allowed_extensions = {'.pdf', '.txt', '.md'}
+        file_ext = Path(file.filename).suffix.lower()
+        if file_ext not in allowed_extensions:
+            raise HTTPException(status_code=400, detail=f"File type {file_ext} not allowed. Use PDF, TXT, or MD.")
+        
+        # Save file to documents directory
+        documents_dir = Path("data/documents")
+        documents_dir.mkdir(parents=True, exist_ok=True)
+        
+        file_path = documents_dir / file.filename
+        with open(file_path, "wb") as buffer:
+            shutil.copyfileobj(file.file, buffer)
+        
+        logger.info(f"File saved: {file_path}")
+        
+        # Rebuild index
+        logger.info("Rebuilding vector index...")
+        success = rag.build_index()
+        
+        if not success:
+            raise HTTPException(status_code=500, detail="Failed to rebuild index")
+        
+        return {
+            "success": True,
+            "message": f"Document '{file.filename}' uploaded and index rebuilt successfully",
+            "file": file.filename
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Upload error: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=f"Upload failed: {str(e)}")
 
 @app.get("/api/status")
 async def status():

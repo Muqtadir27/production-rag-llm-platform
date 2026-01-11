@@ -47,32 +47,22 @@ export default function ChatPage() {
     setLoading(true)
 
     try {
-      // Call the RAG backend
+      // Import API client dynamically to avoid SSR issues
+      const { queryRAG } = await import('@/lib/api-client')
+      
+      // Call the RAG backend directly
       const startTime = Date.now()
-      const response = await fetch('/api/query', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          question: userMessage.content,
-          top_k: 3,
-        }),
+      const data = await queryRAG({
+        question: userMessage.content,
+        top_k: 3,
       })
 
       const elapsed = Date.now() - startTime
       setLatency(elapsed)
 
-      if (!response.ok) {
-        throw new Error('Failed to get response from RAG system')
-      }
-
-      const data = await response.json()
-
       // Extract the answer from the RAG response
-      const answer = data.answer || data.response || 'I could not find an answer in the documents.'
-      const sources = data.retrieved_documents || data.sources || []
-      const status = data.status || 'unknown'
+      const answer = data.answer || 'I could not find an answer in the documents.'
+      const sources = data.retrieved_documents || []
       
       // Only set retrieved count if we have valid sources
       if (sources && Array.isArray(sources) && sources.length > 0) {
@@ -96,7 +86,7 @@ export default function ChatPage() {
       
       if (error instanceof Error) {
         if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
-          errorMessage += 'The backend server may not be running. Please ensure the RAG backend is started on port 8000.'
+          errorMessage += 'The backend server may not be running. Please ensure the RAG backend is started.'
         } else {
           errorMessage += 'Please try rephrasing your question or check that documents are uploaded.'
         }

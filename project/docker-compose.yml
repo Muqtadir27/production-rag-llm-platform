@@ -1,0 +1,50 @@
+# Docker Compose configuration for local development
+#
+# This file allows you to run the backend with persistent data volumes
+# and easy environment variable management.
+#
+# Usage:
+#   docker-compose up -d          # Start in background
+#   docker-compose up              # Start in foreground (see logs)
+#   docker-compose down            # Stop and remove containers
+#   docker-compose logs -f         # View logs
+#   docker-compose restart         # Restart services
+#
+# The backend will be available at http://localhost:8000
+# API docs at http://localhost:8000/docs
+
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    container_name: neurocore-backend
+    
+    ports:
+      - "8000:8000"
+    
+    # Mount volumes for persistent data
+    # - data/documents: Where uploaded documents are stored
+    # - data/vector_index: Vector database index files
+    volumes:
+      - ./data/documents:/app/data/documents
+      - ./data/vector_index:/app/data/vector_index
+    
+    # Environment variables (optional - defaults work for local dev)
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TF_CPP_MIN_LOG_LEVEL=3
+    
+    # Restart policy: restart container if it crashes
+    restart: unless-stopped
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

@@ -1,0 +1,84 @@
+# Docker ignore file - excludes unnecessary files from Docker build context
+# This reduces build time and image size
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Node.js (frontend - not needed in backend image)
+node_modules/
+.next/
+out/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation (not needed in image)
+*.md
+docs/
+
+# Test files
+test_*.py
+*_test.py
+tests/
+.pytest_cache/
+
+# CI/CD
+.github/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+server_*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notebooks (optional - remove if you want them in image)
+notebooks/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Frontend source (not needed in backend image)
+app/
+components/
+lib/
+public/
+package.json
+package-lock.json
+tsconfig.json
+next.config.js
+tailwind.config.ts
+postcss.config.js
+
+# Scripts (optional - remove if you want them)
+*.sh
+*.bat
+*.ps1

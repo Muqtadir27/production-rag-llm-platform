@@ -66,6 +66,40 @@ User Question → Embedder → Retriever → Context → LLM → Answer
 - **☑️ Production-Ready** - Logging, error handling, scalability
 - **☑️ Animated UI** - Three balls revolving around central sphere
 
+## 🚀 Quick Start
+
+### Local Development
+
+1. **Start Backend**:
+   ```bash
+   # Install Python dependencies
+   pip install -r backend/requirements.txt
+   
+   # Run backend
+   python -m backend.app.main
+   ```
+
+2. **Start Frontend** (in a new terminal):
+   ```bash
+   # Install dependencies
+   npm install
+   
+   # Start dev server
+   npm run dev
+   ```
+
+3. **Access**:
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:8000
+   - API Docs: http://localhost:8000/docs
+
+### Production Deployment
+
+- **Frontend**: Deployed automatically to GitHub Pages via GitHub Actions
+- **Backend**: Dockerized for easy deployment to any container platform
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
+
 ## 📁 Project Structure
 
 ```
@@ -267,19 +301,30 @@ RAGPipeline(llm_model="google/flan-t5-large")
 
 ## 🚢 Deployment
 
-### Docker
+### Quick Reference
 
+- **Frontend**: Automatically deployed to GitHub Pages on push to `main`
+- **Backend**: Dockerized, deployable to any container platform
+
+**For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md)**
+
+### Quick Start
+
+**Frontend (GitHub Pages)**:
+1. Enable GitHub Pages in repository settings
+2. Push to `main` branch
+3. Frontend auto-deploys via GitHub Actions
+
+**Backend (Docker)**:
 ```bash
-docker build -t neurocore-rag .
-docker run -p 8000:8000 -p 3000:3000 neurocore-rag
+docker build -t neurocore-backend .
+docker run -p 8000:8000 neurocore-backend
 ```
 
-### Cloud Platforms
-- AWS EC2 / Lambda
-- Google Cloud Run
-- Azure Container Instances
-- Render
-- Heroku
+**Local Development with Docker**:
+```bash
+docker-compose up
+```
 
 ## 🔐 Security
 
