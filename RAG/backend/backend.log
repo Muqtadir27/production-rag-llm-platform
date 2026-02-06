@@ -1,0 +1,568 @@
+
+> backend@1.0.0 start
+> node server.js
+
+📚 Bootstrap started...
+DEBUG: Documents length: 0
+🚀 RAG backend running on http://localhost:3001
+DEBUG: Ingesting PDF minimal.pdf
+DEBUG: Buffer read, parsing PDF...
+DEBUG: PDF parsed, chunking...
+DEBUG: Text chunked into 1 parts.
+DEBUG: Embedding chunk 1/1...
+DEBUG: Prompt being sent to Ollama: 
+You are a retrieval-augmented AI assistant.
+
+CRITICAL RULES:
+- You MUST answer using ONLY the information in the context.
+- If the context does NOT contain the answer, say:
+  "I don’t know based on the provided documents."
+- Do NOT use prior knowledge.
+- Do NOT guess.
+- Do NOT make up definitions.
+
+Context:
+Source: minimal.pdf
+Content: 
+
+-- 1 of 1 --
+
+
+
+Question:
+What does the document say?
+
+Answer (grounded in context only):
+
+DEBUG: Ingesting PDF MiniDocument.pdf
+DEBUG: Buffer read, parsing PDF...
+DEBUG: PDF parsed, chunking...
+DEBUG: Text chunked into 5 parts.
+DEBUG: Embedding chunk 1/5...
+DEBUG: Embedding chunk 2/5...
+DEBUG: Embedding chunk 3/5...
+DEBUG: Embedding chunk 4/5...
+DEBUG: Embedding chunk 5/5...
+DEBUG: Prompt being sent to Ollama: 
+You are a retrieval-augmented AI assistant.
+
+CRITICAL RULES:
+- You MUST answer using ONLY the information in the context.
+- If the context does NOT contain the answer, say:
+  "I don’t know based on the provided documents."
+- Do NOT use prior knowledge.
+- Do NOT guess.
+- Do NOT make up definitions.
+
+Context:
+Source: MiniDocument.pdf
+Content: et al. "CNN Based Face Emotion Recognition System for Healthcare
+Application." EAI Endorsed Transactions on Pervasive Health and Technology 10 (2024).
+• Paper Name:[4] Agung, Erlangga Satrio, Achmad Pratama Rifai, and Titis Wijayanto. "Image-based facial emotion
+recognition using convolutional neural network on emognition dataset." Scientific Reports 14.1 (2024): 14429.
+
+-- 21 of 21 --
+
+
+
+Source: minimal.pdf
+Content: 
+
+-- 1 of 1 --
+
+
+
+Source: MiniDocument.pdf
+Content: MINOR PROJECT
+AUTISM SUPPORT SYSTEM
+SYSTEM(ASS)
+Submitted By:
+Suhaib Ahmed Khan(160721747016)
+Mohammed Karab Ehtesham(160721747040)
+Mohammed Abdul Muqtadir(160721747043)
+Under the Guidance of 	Sign:
+Mr.Gulam Mujtaba Muqeeth
+
+-- 1 of 21 --
+
+ABSTRACT
+The Autism Support System aims to enhance the learning and emotional
+development of children diagnosed with autism through innovative technologies.
+The emotion recognition module detects and classifies emotions from facial
+expressions, providing audio feedback and maintaining logs of detected emotions.
+In cases of frequent distress detection, an emergency SMS is sent to parents. The
+hand gesture recognition module enables children to play songs based on their facial
+expressions, fostering a multimodal interaction experience. The emotion gaming
+module engages children in interactive games that promote the recognition and
+understanding of emotions. This paper presents the system's architecture, design,
+implementation, and testing, along with the results and potential future
+improvements. The study demonstrates the potential of leveraging advanced
+technologies to support the emotional and social development of children with
+autism, offering a promising tool for therapists, educators, and caregivers. By
+integrating facial recognition, gesture recognition, and emotion-based gaming, the
+system provides a comprehensive platform for emotion detection and interaction..
+This review aims to not only become a reference for future research on emotion
+recognition, but also to provide an overview of the work done in this topic for
+potential readers.
+
+-- 2 of 21 --
+
+INTRODUCTION
+The Autism Support System is an innovative project aimed at providing comprehensive assistance to
+individuals with autism. This system leverages advanced technologies to create a supportive environment
+that caters to the unique needs of autistic individuals. By integrating emotion recognition, personalized
+feedback, and real-time notifications, this system seeks to enhance the quality of life for users and their
+caregivers
+Objective:
+● Timely Intervention: To provide early and appropriate emotional support which can significantly
+improve the quality of life for individuals with ASD.
+● Enhanced Social Skills: To help in developing better social and communication skills.
+● Improved Mental Health: To provide psychological support and coping strategies that can reduce
+anxiety and improve overall mental well-being.
+● Independence: to provide tools and technologies that assist in emotion recognition and can foster
+greater independence and self awareness.
+● Personalized Support: To provide tailored feedback and suggestions to meet individual needs and
+preferences.
+Scope: The "Autism Support System" project aims to provide a comprehensive support framework
+for individuals with autism. The system integrates multiple advanced technologies to offer
+personalized and effective assistance
+
+-- 3 of 21 --
+
+LITERATURE SURVEY
+Paper Name 	Dataset 	Methodology 	Advantages 	Disadvantages
+Talaat, Fatma
+M., et al.
+"Real-time
+facial emotion
+recognition
+convolutional
+neural network
+for autism
+children." Soft
+Computing
+(2024)
+Visual clues
+(movies,
+games)
+Teaching
+emotions to
+autistic
+children using
+visual clues
+Demonstrated
+effectiveness
+of visual clues
+in teaching
+emotions
+Focused on
+visual clues
+only
+Wei, J., Hu, G.,
+Yang, X., Luu,
+A.T. and Dong,
+Y., 2024.
+Video datasets
+with facial
+and body
+gestures
+Combining
+facial expression
+and body
+gesture visual
+information
+Comprehensiv
+e emotion
+recognition by
+considering
+both facial and
+body
+
+Question:
+What does the MiniDocument contain?? 
+
+Answer (grounded in context only):
+
+DEBUG: Prompt being sent to Ollama: 
+You are a retrieval-augmented AI assistant.
+
+CRITICAL RULES:
+- You MUST answer using ONLY the information in the context.
+- If the context does NOT contain the answer, say:
+  "I don’t know based on the provided documents."
+- Do NOT use prior knowledge.
+- Do NOT guess.
+- Do NOT make up definitions.
+
+Context:
+Source: MiniDocument.pdf
+Content: and Adaptive Support:Utilizes logged data to offer
+tailored feedback and suggestions, ensuring individualized care and continuously
+adapting to the user’s needs and progress.
+● Automated Monitoring and Reduced Caregiver Burden:Automates the
+monitoring process, allowing caregivers to focus on direct interaction and quality
+care, while ensuring continuous support without constant manual oversight.
+● Accessibility, Cost-Effectiveness, and Data-Driven Insights:Leverages common
+hardware and open-source software to make advanced support more affordable and
+accessible, while providing data-driven insights for ongoing improvement and
+informed decision-making.
+
+-- 7 of 21 --
+
+ARCHITECTURE
+
+-- 8 of 21 --
+
+CNN
+Layers
+
+-- 9 of 21 --
+
+CONCLUSION
+• Objectives:
+Streamline administrative tasks, Ensure data security , Provide a user-friendly interface
+• Achievements :
+1.Successfully implemented key modules such as administration, fees, staff, expenses,
+admissions, marks using views ,forms ,models
+2. Met user requirements and improved efficiency
+• Challenges :
+Integration issues(connecting mysql with django) , data migration(moving the
+aggregated data between the html pages)
+
+-- 10 of 21 --
+
+Future Enhancement
+• Advanced Emotion and Gesture Recognition:Incorporate contextual data (voice
+tone, body language) and enable multi-facial analysis to improve emotion
+recognition.Implement 3D cameras and depth sensors for accurate gesture
+recognition and allow customization of gestures.
+• Integration with Wearable Devices and Mobile Accessibility:Monitor
+physiological data (heart rate, skin conductance) through wearable devices to gain
+a comprehensive understanding of the user's emotional state.Develop mobile
+applications for real-time support and monitoring on the go.
+• Adaptive Learning and Multiplayer Options:Use adaptive learning algorithms
+to tailor game difficulty and content based on the child’s progress and
+needs.Introduce multiplayer games to encourage social interaction and teamwork.
+• Parental/Guardian Dashboard and Educational Modules:Create a dashboard
+for parents or guardians to monitor progress and receive notifications and
+insights.Develop educational modules to assist with learning and cognitive
+development.
+• Continuous Learning and Advanced AI Techniques:Implement continuous
+learning capabilities to improve system accuracy and effectiveness over
+time.Utilize advanced AI techniques such as deep learning and reinforcement
+learning to enhance performance.
+
+-- 11 of 21 --
+
+IMPLEMENTATION
+Dataset Description:
+The data consists of 48x48 pixel grayscale images of faces. The faces have been
+automatically registered so that the face is more or less centred and occupies about the
+same amount of space in each image. The task is to categorize each face based on the
+emotion shown in the facial expression into one of seven categories (0=Angry,
+1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral). The training set consists
+of 28,709 examples and the public test set consists of 3,589 examples.
+Functional Requirements:
+• Emotion Recognition: The system must capture video input, detect faces, and
+accurately recognize and log emotions in real time.
+• Gesture Recognition: The system should detect and interpret predefined gestures
+to aid communication.
+• Visual Games: Interactive games must be included to support cognitive and motor
+skills
+
+Source: MiniDocument.pdf
+Content: MINOR PROJECT
+AUTISM SUPPORT SYSTEM
+SYSTEM(ASS)
+Submitted By:
+Suhaib Ahmed Khan(160721747016)
+Mohammed Karab Ehtesham(160721747040)
+Mohammed Abdul Muqtadir(160721747043)
+Under the Guidance of 	Sign:
+Mr.Gulam Mujtaba Muqeeth
+
+-- 1 of 21 --
+
+ABSTRACT
+The Autism Support System aims to enhance the learning and emotional
+development of children diagnosed with autism through innovative technologies.
+The emotion recognition module detects and classifies emotions from facial
+expressions, providing audio feedback and maintaining logs of detected emotions.
+In cases of frequent distress detection, an emergency SMS is sent to parents. The
+hand gesture recognition module enables children to play songs based on their facial
+expressions, fostering a multimodal interaction experience. The emotion gaming
+module engages children in interactive games that promote the recognition and
+understanding of emotions. This paper presents the system's architecture, design,
+implementation, and testing, along with the results and potential future
+improvements. The study demonstrates the potential of leveraging advanced
+technologies to support the emotional and social development of children with
+autism, offering a promising tool for therapists, educators, and caregivers. By
+integrating facial recognition, gesture recognition, and emotion-based gaming, the
+system provides a comprehensive platform for emotion detection and interaction..
+This review aims to not only become a reference for future research on emotion
+recognition, but also to provide an overview of the work done in this topic for
+potential readers.
+
+-- 2 of 21 --
+
+INTRODUCTION
+The Autism Support System is an innovative project aimed at providing comprehensive assistance to
+individuals with autism. This system leverages advanced technologies to create a supportive environment
+that caters to the unique needs of autistic individuals. By integrating emotion recognition, personalized
+feedback, and real-time notifications, this system seeks to enhance the quality of life for users and their
+caregivers
+Objective:
+● Timely Intervention: To provide early and appropriate emotional support which can significantly
+improve the quality of life for individuals with ASD.
+● Enhanced Social Skills: To help in developing better social and communication skills.
+● Improved Mental Health: To provide psychological support and coping strategies that can reduce
+anxiety and improve overall mental well-being.
+● Independence: to provide tools and technologies that assist in emotion recognition and can foster
+greater independence and self awareness.
+● Personalized Support: To provide tailored feedback and suggestions to meet individual needs and
+preferences.
+Scope: The "Autism Support System" project aims to provide a comprehensive support framework
+for individuals with autism. The system integrates multiple advanced technologies to offer
+personalized and effective assistance
+
+-- 3 of 21 --
+
+LITERATURE SURVEY
+Paper Name 	Dataset 	Methodology 	Advantages 	Disadvantages
+Talaat, Fatma
+M., et al.
+"Real-time
+facial emotion
+recognition
+convolutional
+neural network
+for autism
+children." Soft
+Computing
+(2024)
+Visual clues
+(movies,
+games)
+Teaching
+emotions to
+autistic
+children using
+visual clues
+Demonstrated
+effectiveness
+of visual clues
+in teaching
+emotions
+Focused on
+visual clues
+only
+Wei, J., Hu, G.,
+Yang, X., Luu,
+A.T. and Dong,
+Y., 2024.
+Video datasets
+with facial
+and body
+gestures
+Combining
+facial expression
+and body
+gesture visual
+information
+Comprehensiv
+e emotion
+recognition by
+considering
+both facial and
+body
+
+Source: MiniDocument.pdf
+Content: public test set consists of 3,589 examples.
+Functional Requirements:
+• Emotion Recognition: The system must capture video input, detect faces, and
+accurately recognize and log emotions in real time.
+• Gesture Recognition: The system should detect and interpret predefined gestures
+to aid communication.
+• Visual Games: Interactive games must be included to support cognitive and motor
+skills development.
+• Emergency Notifications: The system must send SMS notifications to predefined
+contacts when distress is detected frequently.
+• Data Logging: Emotions and timestamps must be logged for further analysis and
+personalized feedback.
+
+-- 12 of 21 --
+
+Non-Functional Requirements:
+●Performance: The system should process video input and provide feedback in real time
+with minimal latency.
+●Usability: The interface should be user-friendly and accessible, with clear instructions and
+easy navigation.
+●Reliability: The system must be robust, with minimal downtime and reliable operation.
+●Scalability: The architecture should support future enhancements and additional
+functionalities.
+●Security: User data, especially sensitive information, must be securely handled and
+protected from unauthorized access.
+Software Requirements:
+●Operating System: Windows, macOS, or Linux
+●Programming Language: Python 3.x
+●Libraries and Frameworks: OpenCV, TensorFlow/Keras, pyttsx3, Twilio, NumPy
+●Development Environment: Visual Studio Code, Jupyter Notebook
+●Version Control: Git/GitHub
+
+-- 13 of 21 --
+
+User Interface
+The model firstly displays the UI above. Upon clicking the PREDICT menu, one can find
+the 3 modules - EmoRecognition, EmoHand, and EmoGame
+
+-- 14 of 21 --
+
+EmoRecognition
+
+-- 15 of 21 --
+
+Log For User Monitoring
+Distress Message
+
+-- 16 of 21 --
+
+Gesture Recognition
+Gesture Recognition with personalized feedback and emotion detection with customized
+songs
+
+-- 17 of 21 --
+
+EmoGame
+
+-- 18 of 21 --
+
+Test Case Templates
+Test Case 	Expected
+Result
+Actual Result Observation 	Analysis 	Output
+Emotion
+Recognition:
+Happy
+System
+recognizes
+"Happy"
+System
+recognizes
+"Neutral"
+Failed 	Criteria for
+each emotion
+needs to be
+updated
+Colour of
+bounding box
+changes +
+audio
+feedback
+received
+Emotion
+Recognition:
+Surprised
+System
+recognizes
+"Surprised"
+System
+recognizes
+"Surprised"
+Performed as
+expected
+Successful 	Color of
+bounding box
+changes +
+audio
+feedback
+received
+Emotion
+Recognition:
+Sad
+System
+recognizes
+"Sad"
+System
+recognizes
+"Sad"
+Performed as
+expected
+Successful 	Color of
+bounding box
+changes +
+audio
+feedback
+received +
+Emergency
+SMS received
+
+-- 19 of 21 --
+
+Personalized
+Feedback:
+Happy
+System
+recognizes
+"Index
+Finger"
+System
+recognizes
+"Index
+Finger"
+Performed as
+expected
+Successful 	None
+Session
+Logging:
+Save Log
+Session log
+saved
+successfully
+Session log
+saved
+successfully
+Performed as
+expected
+Successful 	None
+Notification:
+Distress Alert
+Sends alert
+for distress
+Sends alert
+for distress
+Performed as
+expected
+Successful 	None
+Notification:
+Happy State
+No alert for
+happy state
+No alert for
+happy state
+Performed as
+expected
+Successful 	None
+
+-- 20 of 21 --
+
+REFERENCES
+• Paper Name: [1] Talaat, Fatma M., et al. "Real-time facial emotion recognition model based on kernel autoencoder
+and convolutional neural network for autism children." Soft Computing (2024): 1-14.
+• Paper Name: [2] Wei, J., Hu, G., Yang, X., Luu, A.T. and Dong, Y., 2024. Learning facial expression and body
+gesture visual information for video emotion recognition. Expert Systems with Applications, 237, p.121419.
+Administrative Strategies"
+• Paper Name:[3] Kanna, R. Kishore, et al. "CNN Based Face Emotion Recognition System for Healthcare
+Application." EAI Endorsed Transactions on Pervasive Health and Technology 10 (2024).
+• Paper Name:[4] Agung, Erlangga Satrio, Achmad Pratama Rifai, and Titis Wijayanto. "Image-based facial emotion
+recognition using convolutional neural network on emognition dataset." Scientific Reports 14.1 (2024): 14429.
+
+-- 21 of 21 --
+
+
+
+Question:
+Hey what are all the documents? 
+
+Answer (grounded in context only):
+
+^C
