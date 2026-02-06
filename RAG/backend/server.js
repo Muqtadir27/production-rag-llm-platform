@@ -119,6 +119,26 @@ app.get("/health", (req, res) => {
 });
 
 /* =====================
+   STATIC FRONTEND SERVING
+===================== */
+const __dirname = path.resolve();
+const frontendDir = path.join(__dirname, "../frontend");
+
+if (fs.existsSync(frontendDir)) {
+  app.use(express.static(frontendDir));
+}
+
+// Catch-all to serve index.html for any unknown routes (SPA style)
+app.get("*", (req, res) => {
+  const indexPath = path.join(frontendDir, "index.html");
+  if (fs.existsSync(indexPath)) {
+    res.sendFile(indexPath);
+  } else {
+    res.status(404).send("Frontend not found");
+  }
+});
+
+/* =====================
    START SERVER
 ===================== */
 const PORT = 3001;

@@ -1,5 +1,5 @@
 export async function queryRAG(question) {
-  const res = await fetch('http://localhost:3001/query', {
+  const res = await fetch('/query', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ question })
@@ -8,14 +8,14 @@ export async function queryRAG(question) {
 }
 
 export async function getDocuments() {
-  const res = await fetch('http://localhost:3001/documents')
+  const res = await fetch('/documents')
   return await res.json()
 }
 
 export function uploadFile(file, onProgress) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest()
-    xhr.open('POST', 'http://localhost:3001/upload')
+    xhr.open('POST', '/upload')
     xhr.onload = () => {
       if (xhr.status >= 200 && xhr.status < 300) resolve(JSON.parse(xhr.responseText))
       else reject(new Error(xhr.statusText))

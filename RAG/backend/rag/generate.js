@@ -92,9 +92,37 @@ ${question}
 Final Answer:
 `
 
-  console.log("DEBUG: Prompt being sent to Ollama:", prompt);
+  const ollamaHost = process.env.OLLAMA_HOST || "http://localhost:11434";
+  const groqApiKey = process.env.GROQ_API_KEY;
 
-  const res = await fetch('http://localhost:11434/api/generate', {
+  if (groqApiKey) {
+    console.log("🤖 Generating answer via Groq API...");
+    const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${groqApiKey}`
+      },
+      body: JSON.stringify({
+        model: 'llama3-8b-8192',
+        messages: [
+          { role: 'system', content: 'You are a strict, extraction-only RAG assistant.' },
+          { role: 'user', content: prompt }
+        ],
+        temperature: 0
+      })
+    });
+
+    const data = await res.json();
+    if (data.error) {
+      console.error("GROQ ERROR:", data.error);
+      throw new Error(`Groq API error: ${data.error.message}`);
+    }
+    return data.choices[0].message.content.trim();
+  }
+
+  console.log("🤖 Generating answer via Ollama...");
+  const res = await fetch(`${ollamaHost}/api/generate`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -105,8 +133,8 @@ Final Answer:
         temperature: 0
       }
     })
-  })
+  });
 
-  const data = await res.json()
-  return data.response.trim()
+  const data = await res.json();
+  return data.response.trim();
 }
